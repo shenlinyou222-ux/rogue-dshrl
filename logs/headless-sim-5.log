@@ -1,0 +1,157 @@
+﻿=== godot exit:  (killed=False) ===
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+DSH-RL 无头模拟器  runs=4 max_frames=24000
+
+  run 0 seed=3000 → floor_clear：房 5/11，杀 26，承伤 56（{ "spike": 16 }），帧 41014，TTK中位 3.4s
+     尾事件：[{ "frame": 6782, "kind": "room_enter", "data": { "room": 10, "type": "exit" } }, { "frame": 6782, "kind": "ai", "data": { "brain": "L1", "kind": "room_enter", "room": 10 } }, { "frame": 6812, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 6850, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 6873, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 6896, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 6943, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 7117, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 7179, "kind": "jump", "data": { "who": 0, "n": 2 } }, { "frame": 7229, "kind": "floor_clear", "data": { "floor": 1 } }]
+     轨迹尾：["6990|x10143|y254|vy300|fall|ogfalse|jb0|jmpfalse|hp84|br8|face1|vx-48|Lfalse|Rtrue|near10938,237,patrol,793|tgt683,27|pn10|sf0", "7020|x10259|y255|vy0|run|ogtrue|jb0|jmpfalse|hp84|br8|face1|vx240|Lfalse|Rtrue|near10938,235,patrol,682|tgt683,27|pn8|sf0", "7050|x10379|y255|vy0|run|ogtrue|jb0|jmpfalse|hp84|br8|face1|vx240|Lfalse|Rtrue|near10938,234,patrol,562|tgt683,27|pn7|sf0", "7080|x10499|y255|vy0|run|ogtrue|jb0|jmpfalse|hp84|br8|face1|vx240|Lfalse|Rtrue|near10938,232,patrol,442|tgt683,27|pn5|sf0", "7110|x10619|y255|vy0|run|ogtrue|jb0|jmpfalse|hp84|br8|face1|vx240|Lfalse|Rtrue|near10938,231,patrol,322|tgt683,27|pn4|sf0", "7140|x10739|y142|vy100|fall|ogfalse|jb0|jmpfalse|hp84|br8|face1|vx240|Lfalse|Rtrue|near10938,227,patrol,202|tgt683,27|pn3|sf0", "7170|x10849|y284|vy300|fall|ogfalse|jb0|jmpfalse|hp84|br6|face1|vx240|Lfalse|Rtrue|near10929,224,chase,84|tgt683,27|pn0|sf0", "7200|x10936|y259|vy173|air_attack|ogfalse|jb0|jmpfalse|hp84|br52|face-1|vx0|Lfalse|Rfalse|nearB5 near=10924.2 me=10936.6 want=-1 face=-1|tgt683,27|pn0|sf7"]
+     现场：玩家 p=(10918,402) 格=(682,25) 开格数=12
+   (681,23) 字符=. 阻挡=false
+   (682,23) 字符=. 阻挡=false
+   (683,23) 字符=. 阻挡=false
+   (684,23) 字符=# 阻挡=true
+   (681,24) 字符=. 阻挡=false
+   (682,24) 字符=. 阻挡=false
+   (683,24) 字符=. 阻挡=false
+   (684,24) 字符=# 阻挡=true
+   (681,25) 字符=. 阻挡=false
+   (682,25) 字符=. 阻挡=false
+   (683,25) 字符=. 阻挡=false
+   (684,25) 字符=# 阻挡=true
+   (681,26) 字符=. 阻挡=false
+   (682,26) 字符=. 阻挡=false
+   (683,26) 字符=. 阻挡=false
+   (684,26) 字符=# 阻挡=true
+   (681,27) 字符=. 阻挡=false
+   (682,27) 字符=. 阻挡=false
+   (683,27) 字符=. 阻挡=false
+   (684,27) 字符=# 阻挡=true
+ 22 ..........???????
+ 23 ..........???????
+ 24 ..........???????
+ 25 ..........???????
+ 26 ..........???????
+ 27 .....^....???????
+ 28 ...#######???????
+ 29 #.########???????
+     钥匙：拿到=["key_f1"] 场上=[{ "name": "key_f1", "cell": (183, 24), "taken": true }] 门=[{ "mid": "gate_key_f1", "key": "key_f1", "open": true, "cells": 6 }, { "mid": "gate_switch_f1", "key": "", "open": true, "cells": 6 }]
+  run 1 seed=10919 → playing：房 11/11，杀 8，承伤 80（{ "spike": 80 }），帧 9059，TTK中位 2.6s
+     尾事件：[{ "frame": 7666, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 7689, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 7731, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 7799, "kind": "pickup", "data": { "item": "currency_1_8", "name": "碎片", "rarity": 1 } }, { "frame": 7904, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 8037, "kind": "room_enter", "data": { "room": 10, "type": "exit" } }, { "frame": 8037, "kind": "ai", "data": { "brain": "L1", "kind": "room_enter", "room": 10 } }, { "frame": 8042, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 8082, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 8115, "kind": "jump", "data": { "who": 0, "n": 2 } }]
+     轨迹尾：["8820|x10370|y319|vy0|block|ogtrue|jb0|jmpfalse|hp20|br32|face1|vx0|Lfalse|Rtrue|near10368,320,chase,3|tgt695,20|pn0|sf663", "8850|x10370|y319|vy0|block|ogtrue|jb0|jmpfalse|hp20|br32|face1|vx0|Lfalse|Rtrue|near10368,320,chase,3|tgt695,20|pn0|sf693", "8880|x10370|y319|vy0|block|ogtrue|jb0|jmpfalse|hp20|br32|face1|vx0|Lfalse|Rtrue|near10368,320,chase,3|tgt695,20|pn0|sf723", "8910|x10370|y319|vy0|block|ogtrue|jb0|jmpfalse|hp20|br32|face1|vx0|Lfalse|Rtrue|near10368,320,chase,3|tgt695,20|pn0|sf753", "8940|x10370|y319|vy0|block|ogtrue|jb0|jmpfalse|hp20|br32|face1|vx0|Lfalse|Rtrue|near10368,320,chase,3|tgt695,20|pn0|sf783", "8970|x10370|y319|vy0|block|ogtrue|jb0|jmpfalse|hp20|br32|face1|vx0|Lfalse|Rtrue|near10368,320,chase,3|tgt695,20|pn0|sf813", "9000|x10370|y319|vy0|block|ogtrue|jb0|jmpfalse|hp20|br32|face1|vx0|Lfalse|Rtrue|near10368,320,chase,3|tgt695,20|pn0|sf843", "9030|x10370|y319|vy0|block|ogtrue|jb0|jmpfalse|hp20|br32|face1|vx0|Lfalse|Rtrue|near10368,320,chase,3|tgt695,20|pn0|sf873"]
+     现场：玩家 p=(10371,320) 格=(648,19) 开格数=12
+   (647,17) 字符=. 阻挡=false
+   (648,17) 字符=. 阻挡=false
+   (649,17) 字符=. 阻挡=false
+   (650,17) 字符=. 阻挡=false
+   (647,18) 字符=. 阻挡=false
+   (648,18) 字符=. 阻挡=false
+   (649,18) 字符=. 阻挡=false
+   (650,18) 字符=. 阻挡=false
+   (647,19) 字符=. 阻挡=false
+   (648,19) 字符=. 阻挡=false
+   (649,19) 字符=. 阻挡=false
+   (650,19) 字符=. 阻挡=false
+   (647,20) 字符=# 阻挡=true
+   (648,20) 字符=. 阻挡=false
+   (649,20) 字符=. 阻挡=false
+   (650,20) 字符=. 阻挡=false
+   (647,21) 字符=# 阻挡=true
+   (648,21) 字符=# 阻挡=true
+   (649,21) 字符=. 阻挡=false
+   (650,21) 字符=. 阻挡=false
+ 16 .................
+ 17 ..##.............
+ 18 ...#.............
+ 19 ...#..#.......##.
+ 20 .^.#.###.....####
+ 21 #########..######
+ 22 #################
+ 23 #################
+     钥匙：拿到=["key_f1"] 场上=[{ "name": "key_f1", "cell": (177, 26), "taken": true }] 门=[{ "mid": "gate_key_f1", "key": "key_f1", "open": true, "cells": 6 }, { "mid": "gate_switch_f1", "key": "", "open": true, "cells": 6 }]
+  run 2 seed=18838 → playing：房 8/11，杀 9，承伤 48（{ "spike": 48 }），帧 9482，TTK中位 3.1s
+     尾事件：[{ "frame": 9252, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 9275, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 9298, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 9321, "kind": "jump", "data": { "who": 0, "n": 2 } }, { "frame": 9346, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 9369, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 9392, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 9415, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 9438, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 9461, "kind": "jump", "data": { "who": 0, "n": 1 } }]
+     轨迹尾：["9270|x7017|y412|vy-67|jump|ogfalse|jb0|jmpfalse|hp52|br8|face1|vx0|Lfalse|Rtrue|near7354,416,patrol,336|tgt521,24|pn18|sf688", "9300|x7017|y412|vy-600|jump|ogfalse|jb0|jmpfalse|hp52|br8|face1|vx0|Lfalse|Rtrue|near7354,416,patrol,336|tgt521,24|pn17|sf718", "9330|x7017|y412|vy-227|jump|ogfalse|jb0|jmpfalse|hp52|br8|face1|vx0|Lfalse|Rtrue|near7354,416,patrol,336|tgt521,24|pn16|sf748", "9360|x7017|y412|vy-200|jump|ogfalse|jb0|jmpfalse|hp52|br8|face1|vx0|Lfalse|Rtrue|near7354,416,patrol,336|tgt521,24|pn16|sf778", "9390|x7017|y412|vy33|jump|ogfalse|jb0|jmpfalse|hp52|br8|face1|vx0|Lfalse|Rtrue|near7354,416,patrol,336|tgt521,24|pn16|sf808", "9420|x7017|y412|vy-500|jump|ogfalse|jb0|jmpfalse|hp52|br8|face1|vx0|Lfalse|Rtrue|near7354,416,patrol,336|tgt521,24|pn15|sf838", "9450|x7017|y412|vy-267|jump|ogfalse|jb0|jmpfalse|hp52|br8|face1|vx0|Lfalse|Rtrue|near7354,416,patrol,336|tgt521,24|pn14|sf868", "9480|x7017|y412|vy-33|jump|ogfalse|jb0|jmpfalse|hp52|br8|face1|vx0|Lfalse|Rtrue|near7354,416,patrol,336|tgt521,24|pn14|sf898"]
+     现场：玩家 p=(7018,413) 格=(438,25) 开格数=6
+   (437,23) 字符=. 阻挡=false
+   (438,23) 字符=# 阻挡=true
+   (439,23) 字符=# 阻挡=true
+   (440,23) 字符=. 阻挡=false
+   (437,24) 字符=. 阻挡=false
+   (438,24) 字符=. 阻挡=false
+   (439,24) 字符=# 阻挡=true
+   (440,24) 字符=. 阻挡=false
+   (437,25) 字符=. 阻挡=false
+   (438,25) 字符=. 阻挡=false
+   (439,25) 字符=# 阻挡=true
+   (440,25) 字符=# 阻挡=true
+   (437,26) 字符=. 阻挡=false
+   (438,26) 字符=. 阻挡=false
+   (439,26) 字符=# 阻挡=true
+   (440,26) 字符=# 阻挡=true
+   (437,27) 字符=# 阻挡=true
+   (438,27) 字符=# 阻挡=true
+   (439,27) 字符=# 阻挡=true
+   (440,27) 字符=# 阻挡=true
+ 22 .................
+ 23 ........##.......
+ 24 .........#.......
+ 25 .........####..#.
+ 26 .........########
+ 27 #################
+ 28 #################
+ 29 #################
+     钥匙：拿到=["key_f1"] 场上=[{ "name": "key_f1", "cell": (189, 23), "taken": true }] 门=[{ "mid": "gate_key_f1", "key": "key_f1", "open": true, "cells": 6 }, { "mid": "gate_switch_f1", "key": "", "open": false, "cells": 6 }]
+  run 3 seed=26757 → playing：房 4/11，杀 2，承伤 0（{  }），帧 24000，TTK中位 2.8s
+     尾事件：[{ "frame": 1538, "kind": "player_hit", "data": { "dmg": 23, "blocked": false, "combo": 1 } }, { "frame": 1587, "kind": "kill", "data": { "who": 1004, "kind": "enemy", "by": 0 } }, { "frame": 1587, "kind": "player_hit", "data": { "dmg": 17, "blocked": false, "combo": 2 } }, { "frame": 1609, "kind": "kill", "data": { "who": 1005, "kind": "enemy", "by": 0 } }, { "frame": 1609, "kind": "player_hit", "data": { "dmg": 17, "blocked": false, "combo": 3 } }, { "frame": 1626, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 1649, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 1672, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 1713, "kind": "jump", "data": { "who": 0, "n": 2 } }, { "frame": 1753, "kind": "jump", "data": { "who": 0, "n": 1 } }]
+     轨迹尾：["23790|x3484|y127|vy0|run|ogtrue|jb0|jmpfalse|hp100|br65|face-1|vx-240|Ltrue|Rfalse|near6186,52,patrol,2697|tgt218,21|pn0|sf0", "23820|x3484|y127|vy0|run|ogtrue|jb0|jmpfalse|hp100|br65|face-1|vx-240|Ltrue|Rfalse|near6186,52,patrol,2697|tgt218,21|pn0|sf0", "23850|x3484|y127|vy0|run|ogtrue|jb0|jmpfalse|hp100|br65|face-1|vx-240|Ltrue|Rfalse|near6186,52,patrol,2697|tgt218,21|pn0|sf0", "23880|x3484|y127|vy0|run|ogtrue|jb0|jmpfalse|hp100|br65|face-1|vx-240|Ltrue|Rfalse|near6186,52,patrol,2697|tgt218,21|pn0|sf0", "23910|x3484|y127|vy0|run|ogtrue|jb0|jmpfalse|hp100|br65|face-1|vx-240|Ltrue|Rfalse|near6186,52,patrol,2697|tgt218,21|pn0|sf0", "23940|x3484|y127|vy0|run|ogtrue|jb0|jmpfalse|hp100|br65|face-1|vx-240|Ltrue|Rfalse|near6186,52,patrol,2697|tgt218,21|pn0|sf0", "23970|x3484|y127|vy0|run|ogtrue|jb0|jmpfalse|hp100|br65|face-1|vx-240|Ltrue|Rfalse|near6186,52,patrol,2697|tgt218,21|pn0|sf0", "24000|x3484|y127|vy0|run|ogtrue|jb0|jmpfalse|hp100|br65|face-1|vx-240|Ltrue|Rfalse|near6186,52,patrol,2697|tgt218,21|pn0|sf0"]
+     现场：玩家 p=(3485,128) 格=(217,7) 开格数=0
+   (216,5) 字符=. 阻挡=false
+   (217,5) 字符=. 阻挡=false
+   (218,5) 字符=. 阻挡=false
+   (219,5) 字符=. 阻挡=false
+   (216,6) 字符=. 阻挡=false
+   (217,6) 字符=. 阻挡=false
+   (218,6) 字符=. 阻挡=false
+   (219,6) 字符=. 阻挡=false
+   (216,7) 字符=. 阻挡=false
+   (217,7) 字符=. 阻挡=false
+   (218,7) 字符=. 阻挡=false
+   (219,7) 字符=. 阻挡=false
+   (216,8) 字符=# 阻挡=true
+   (217,8) 字符=# 阻挡=true
+   (218,8) 字符=# 阻挡=true
+   (219,8) 字符=# 阻挡=true
+   (216,9) 字符=. 阻挡=false
+   (217,9) 字符=. 阻挡=false
+   (218,9) 字符=. 阻挡=false
+   (219,9) 字符=. 阻挡=false
+  4 .................
+  5 .................
+  6 .................
+  7 .................
+  8 #################
+  9 .................
+ 10 .................
+ 11 .................
+     钥匙：拿到=[] 场上=[{ "name": "key_f1", "cell": (218, 21), "taken": false }] 门=[{ "mid": "gate_key_f1", "key": "key_f1", "open": false, "cells": 6 }, { "mid": "gate_switch_f1", "key": "", "open": false, "cells": 6 }]
+  · 模拟 4 局：158179 ms（平均 39544 ms/局）
+  ✗ [S6] 卡死率必须低（卡住 4/4；机制门/机关是主因，超过 25% 说明关卡有问题）
+  · 平均每局 20888 帧（348.1 秒模拟时间）；平均击杀 11；平均承伤 46
+  · 逐层通过：第1层 1 / 第2层 1 / 第3层 0
+  · TTK 参考：普通敌人 1.5~3.0 秒（契约），实测中位 TTK 2.90 秒（样本 45 个敌人）
+  · 难度契约 vs 实测（§4.3）
+  ·   · TTK 普通敌人契约 1.5~3.0 秒
+  ·   · 每层威胁上限：6 + 2×层
+  ·   · 血量成长 ×(1+0.18)^(层-1)，伤害成长 ×(1+0.030)^(层-1)（伤害慢得多）
+
+--- 无头模拟: 通过 5 / 失败 1（158571 ms）---
+失败明细：
+  ✗ [S6] 卡死率必须低（卡住 4/4；机制门/机关是主因，超过 25% 说明关卡有问题）
+
+--- stderr ---
+WARNING: 6184 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+ERROR: 8 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:822)
+

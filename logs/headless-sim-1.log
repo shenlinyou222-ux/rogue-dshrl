@@ -1,0 +1,91 @@
+﻿=== godot exit:  (killed=False) ===
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+DSH-RL 无头模拟器  runs=2 max_frames=20000
+
+  run 0 seed=3000 → playing：房 9/11，杀 7，承伤 24（{ "spike": 24 }），帧 6846，TTK中位 9.8s
+     尾事件：[{ "frame": 4858, "kind": "hit", "data": { "who": 1012, "dmg": 21, "blocked": false } }, { "frame": 4858, "kind": "player_hit", "data": { "dmg": 21, "blocked": false, "combo": 4 } }, { "frame": 4893, "kind": "hit", "data": { "who": 1012, "dmg": 9, "blocked": false } }, { "frame": 4893, "kind": "player_hit", "data": { "dmg": 9, "blocked": false, "combo": 5 } }, { "frame": 4914, "kind": "kill", "data": { "who": 1012, "kind": "enemy", "by": 0 } }, { "frame": 4914, "kind": "player_hit", "data": { "dmg": 12, "blocked": false, "combo": 6 } }, { "frame": 4939, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 5007, "kind": "room_enter", "data": { "room": 8, "type": "normal" } }, { "frame": 5007, "kind": "ai", "data": { "brain": "L1", "kind": "room_enter", "room": 8 } }, { "frame": 5016, "kind": "jump", "data": { "who": 0, "n": 1 } }]
+     轨迹尾：["6630|x8297|y367|vy0|idle|ogtrue|jb0|jmpfalse|hp76|br8|face1|vx0|Lfalse|Rfalse|near8297,432,chase,1|tgt518,26|pn1|sf683", "6660|x8297|y367|vy0|idle|ogtrue|jb0|jmpfalse|hp76|br8|face1|vx0|Lfalse|Rfalse|near8297,432,chase,1|tgt518,26|pn1|sf713", "6690|x8297|y367|vy0|idle|ogtrue|jb0|jmpfalse|hp76|br8|face1|vx0|Lfalse|Rfalse|near8297,432,chase,1|tgt518,26|pn1|sf743", "6720|x8297|y367|vy0|idle|ogtrue|jb0|jmpfalse|hp76|br8|face1|vx0|Lfalse|Rfalse|near8297,432,chase,1|tgt518,26|pn1|sf773", "6750|x8297|y367|vy0|idle|ogtrue|jb0|jmpfalse|hp76|br8|face1|vx0|Lfalse|Rfalse|near8297,432,chase,1|tgt518,26|pn1|sf803", "6780|x8297|y367|vy0|idle|ogtrue|jb0|jmpfalse|hp76|br8|face1|vx0|Lfalse|Rfalse|near8297,432,chase,1|tgt518,26|pn1|sf833", "6810|x8297|y367|vy0|idle|ogtrue|jb0|jmpfalse|hp76|br8|face1|vx0|Lfalse|Rfalse|near8297,432,chase,1|tgt518,26|pn1|sf863", "6840|x8297|y367|vy0|idle|ogtrue|jb0|jmpfalse|hp76|br8|face1|vx0|Lfalse|Rfalse|near8297,432,chase,1|tgt518,26|pn1|sf893"]
+     现场：玩家 p=(8298,368) 格=(518,22) 开格数=6
+   (517,20) 字符=. 阻挡=false
+   (518,20) 字符=. 阻挡=false
+   (519,20) 字符=. 阻挡=false
+   (520,20) 字符=. 阻挡=false
+   (517,21) 字符=. 阻挡=false
+   (518,21) 字符=. 阻挡=false
+   (519,21) 字符=. 阻挡=false
+   (520,21) 字符=. 阻挡=false
+   (517,22) 字符=. 阻挡=false
+   (518,22) 字符=. 阻挡=false
+   (519,22) 字符=. 阻挡=false
+   (520,22) 字符=. 阻挡=false
+   (517,23) 字符=. 阻挡=false
+   (518,23) 字符=# 阻挡=true
+   (519,23) 字符=# 阻挡=true
+   (520,23) 字符=. 阻挡=false
+   (517,24) 字符=. 阻挡=false
+   (518,24) 字符=. 阻挡=false
+   (519,24) 字符=. 阻挡=false
+   (520,24) 字符=. 阻挡=false
+ 19 ...........##....
+ 20 .................
+ 21 .................
+ 22 .................
+ 23 ....##..##.......
+ 24 .................
+ 25 ...............##
+ 26 ....^...B.....###
+     钥匙：拿到=["key_f1"] 场上=[{ "name": "key_f1", "cell": (183, 24), "taken": true }] 门=[{ "mid": "gate_key_f1", "key": "key_f1", "open": true, "cells": 6 }, { "mid": "gate_switch_f1", "key": "", "open": false, "cells": 6 }]
+  run 1 seed=10919 → playing：房 8/11，杀 3，承伤 16（{ "spike": 16 }），帧 3421，TTK中位 5.4s
+     尾事件：[{ "frame": 3199, "kind": "jump", "data": { "who": 0, "n": 2 } }, { "frame": 3224, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 3247, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 3270, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 3293, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 3316, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 3339, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 3362, "kind": "jump", "data": { "who": 0, "n": 2 } }, { "frame": 3387, "kind": "jump", "data": { "who": 0, "n": 1 } }, { "frame": 3410, "kind": "jump", "data": { "who": 0, "n": 1 } }]
+     轨迹尾：["3210|x7129|y380|vy-160|jump|ogfalse|jb0|jmpfalse|hp84|br8|face1|vx0|Lfalse|Rfalse|near7128,336,chase,2|tgt495,22|pn8|sf689", "3240|x7129|y380|vy-133|jump|ogfalse|jb0|jmpfalse|hp84|br8|face1|vx0|Lfalse|Rfalse|near7128,336,chase,2|tgt495,22|pn8|sf719", "3270|x7129|y380|vy-667|jump|ogfalse|jb0|jmptrue|hp84|br8|face1|vx0|Lfalse|Rfalse|near7131,336,chase,1|tgt495,22|pn8|sf749", "3300|x7129|y380|vy-433|jump|ogfalse|jb0|jmpfalse|hp84|br8|face1|vx0|Lfalse|Rfalse|near7131,336,chase,1|tgt495,22|pn8|sf779", "3330|x7129|y380|vy-200|jump|ogfalse|jb0|jmpfalse|hp84|br8|face1|vx0|Lfalse|Rfalse|near7128,336,chase,2|tgt495,22|pn8|sf809", "3360|x7129|y380|vy33|jump|ogfalse|jb0|jmpfalse|hp84|br8|face1|vx0|Lfalse|Rfalse|near7128,336,chase,2|tgt495,22|pn8|sf839", "3390|x7129|y380|vy-567|jump|ogfalse|jb0|jmpfalse|hp84|br8|face1|vx0|Lfalse|Rfalse|near7131,336,chase,1|tgt495,22|pn8|sf869", "3420|x7129|y380|vy-333|jump|ogfalse|jb0|jmpfalse|hp84|br8|face1|vx0|Lfalse|Rfalse|near7131,336,chase,1|tgt495,22|pn8|sf899"]
+     现场：玩家 p=(7130,380) 格=(445,23) 开格数=6
+   (444,21) 字符=. 阻挡=false
+   (445,21) 字符=# 阻挡=true
+   (446,21) 字符=# 阻挡=true
+   (447,21) 字符=. 阻挡=false
+   (444,22) 字符=. 阻挡=false
+   (445,22) 字符=. 阻挡=false
+   (446,22) 字符=# 阻挡=true
+   (447,22) 字符=. 阻挡=false
+   (444,23) 字符=. 阻挡=false
+   (445,23) 字符=. 阻挡=false
+   (446,23) 字符=# 阻挡=true
+   (447,23) 字符=. 阻挡=false
+   (444,24) 字符=# 阻挡=true
+   (445,24) 字符=. 阻挡=false
+   (446,24) 字符=# 阻挡=true
+   (447,24) 字符=. 阻挡=false
+   (444,25) 字符=# 阻挡=true
+   (445,25) 字符=# 阻挡=true
+   (446,25) 字符=# 阻挡=true
+   (447,25) 字符=# 阻挡=true
+ 20 .................
+ 21 ........##.......
+ 22 .........#.......
+ 23 .........#...#...
+ 24 ########.#.####.#
+ 25 #################
+ 26 #################
+ 27 #################
+     钥匙：拿到=["key_f1"] 场上=[{ "name": "key_f1", "cell": (177, 26), "taken": true }] 门=[{ "mid": "gate_key_f1", "key": "key_f1", "open": true, "cells": 6 }, { "mid": "gate_switch_f1", "key": "", "open": false, "cells": 6 }]
+  · 模拟 2 局：32402 ms（平均 16201 ms/局）
+  ✗ [S6] 卡死率必须低（卡住 2/2；机制门/机关是主因，超过 25% 说明关卡有问题）
+  · 平均每局 5133 帧（85.6 秒模拟时间）；平均击杀 5；平均承伤 20
+  · 逐层通过：第1层 0 / 第2层 0 / 第3层 0
+  · TTK 参考：普通敌人 1.5~3.0 秒（契约），实测中位 TTK 5.42 秒（样本 10 个敌人）
+  · 难度契约 vs 实测（§4.3）
+  ·   · TTK 普通敌人契约 1.5~3.0 秒
+  ·   · 每层威胁上限：6 + 2×层
+  ·   · 血量成长 ×(1+0.18)^(层-1)，伤害成长 ×(1+0.030)^(层-1)（伤害慢得多）
+
+--- 无头模拟: 通过 5 / 失败 1（33053 ms）---
+失败明细：
+  ✗ [S6] 卡死率必须低（卡住 2/2；机制门/机关是主因，超过 25% 说明关卡有问题）
+
+--- stderr ---
+WARNING: 2274 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+ERROR: 8 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:822)
+

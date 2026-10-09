@@ -1,0 +1,8 @@
+# Godot 4
+.godot/
+.import/
+export_presets.cfg
+
+# 运行产物
+*.log
+!logs/*.log
