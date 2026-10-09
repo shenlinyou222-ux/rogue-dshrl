@@ -261,7 +261,7 @@ DSH-RL 无头模拟器  runs=6 max_frames=24000
 后来被改成了 1000；而且 **`sim.gd` 文件修改时间（21:06）没有反映这次改动**
 （或者作者改了之后又把 mtime 弄回去了）。总之：
 
-- `logs/` 与 `E:\job-hunt\rogue-dshrl` 里的 `tools/sim.gd` **不是同一份代码的产物**
+- `logs/` 与当前工作区里的 `tools/sim.gd` **不是同一份代码的产物**
 - 即使种子只差一局，结果也不同：拿 log6 的 `seed 26757` 一局对比——
   旧日志是「房 4/11、帧 24000（**帧上限用尽**）」，
   我复跑的 `run 3 seed=24757` 是「房 9/11、帧 33405、`floor_clear`」。
@@ -274,9 +274,8 @@ DSH-RL 无头模拟器  runs=6 max_frames=24000
 **建议**：要么把 `logs/` 清掉重跑一份，要么在每个日志头部写上 `git rev-parse HEAD` 和
 完整的命令行（现在只打印 `runs=6 max_frames=24000`，**不打印种子**，所以事后无法复现）。
 
-顺带一个次要问题：`tools/run.ps1` 的 `-Project` 默认值是
-`"C:\Users\user\Desktop\ds harness\rogue_dshrl"`（`run.ps1:10`），不是当前目录——
-那台机器上**这个目录确实存在**（我确认过，里面就是这套代码的原始版本）。
+顺带一个次要问题：`tools/run.ps1` 的 `-Project` 默认值是**一个写死的绝对路径**（`run.ps1:10`），
+不是当前目录——那台机器上**这个目录确实存在**（我确认过，里面就是这套代码的原始版本）。
 所以用默认参数跑 `run.ps1` 会去跑另一个目录，很容易让人以为自己在测当前仓库。
 
 （另注：`.gitignore` 里有 `*.log` + `!logs/*.log`，所以 `logs/` 是被刻意保留进仓库的。
@@ -288,9 +287,9 @@ DSH-RL 无头模拟器  runs=6 max_frames=24000
 
 用仓库自带的 `tools/run.ps1`（会把 Godot 的 stdout/stderr 和退出码一起落盘）。
 
-> **先改参数**：`run.ps1` 的 `-Project` 默认值是 `"C:\Users\user\Desktop\ds harness\rogue_dshrl"`，
-> 不是当前目录。不改它就会去跑别的目录（§7.2 第 11 条）。用 `--path <本目录>` 直接调 Godot
-> 反而更安全，下面第二节给的就是那种写法。
+> **无需改参数**：`run.ps1` 的 `-Project` 默认解析为**本脚本所在目录的上一级**（也就是仓库根），
+> `-Godot` 默认从环境变量 `GODOT`（或 `PATH`）里找 Godot 控制台可执行文件。
+> 也可以显式传 `-Project (Get-Location).Path`，或直接用下面的 `--path <本目录>` 写法调 Godot。
 
 ```powershell
 # 生成层自检
@@ -315,17 +314,17 @@ DSH-RL 无头模拟器  runs=6 max_frames=24000
 
 ```powershell
 # 下面两条是我实际跑过的，§4.1 / §4.2 的结果就来自它们
-E:\Godot\Godot_v4.7.2-stable_win64_console.exe --headless --path <项目目录> `
+<Godot 控制台可执行文件> --headless --path <项目目录> `
   --script tools/selftest.gd -- --quick                          # 61/61，46 秒
 
-E:\Godot\Godot_v4.7.2-stable_win64_console.exe --headless --path <项目目录> `
+<Godot 控制台可执行文件> --headless --path <项目目录> `
   --script tools/sim.gd -- --runs=6 --frames=24000 --trace=1     # 通过 6/失败 0，150 秒
 ```
 
 GUI（这一条我试过：项目**需要先被扫描一次**才能跑，见下）：
 
 ```powershell
-E:\Godot\Godot_v4.7.2-stable_win64_console.exe --headless --path <项目目录> --quit-after 400
+<Godot 控制台可执行文件> --headless --path <项目目录> --quit-after 400
 ```
 
 > **`rogue-dshrl` 在干净克隆上不需要额外步骤**——我用同样的方式跑它一次就成功了。
@@ -341,7 +340,7 @@ E:\Godot\Godot_v4.7.2-stable_win64_console.exe --headless --path <项目目录> 
 打开 L2 模型脑的唯一入口是命令行参数 `--ai`（`main.gd:38`）：
 
 ```powershell
-E:\Godot\...console.exe --path <项目目录> -- --ai=1
+<Godot 控制台可执行文件> --path <项目目录> -- --ai=1
 # HUD 会打印「种子 N · 模型导演 L2」；不加 --ai 则是「规则导演 L1」
 ```
 
@@ -422,7 +421,7 @@ rogue-dshrl/
 | 8 | `project.godot` 第 2-3 行与 `selftest.gd:49` 引用 `docs/横板动作Roguelike_机制拆解_v0.1.md`、`docs/..._地图生成方案_v0.1.md` | 这两份文档**不在仓库里**。`docs/` 下只有 AI 导演层和开发状态两份 | `docs/` |
 | 9 | `docs/开发状态与遗留问题.md` §1 说 S1–S6「✅ 6/6 绿（6 局：真·卡死 0，第 1 层 6/6、第 2 层 5/6 通过，平均 27 杀）」§6.7 说"6 局模拟从真·卡死 3/6 变成 **0/6**" | **复跑之后：文档说得对。** 实测 6/6 全绿、平均 27 杀、第 1 层 6/6、第 2 层 5/6、真·卡死 0/6，数字逐个对得上。**出问题的是 `logs/` 里那 6 份日志**——它们来自日志写完之后又被改过的旧代码（§4.3），结论是反的 | `logs/` vs `docs/` |
 | 10 | `docs/开发状态与遗留问题.md` §3.1 说"`tools/selftest.gd` → 61/61 通过" | **复跑之后：文档说得对。** `--quick` 下实测 `通过 61 / 失败 0`。我一开始按源码静态数出 56 处 call site，那个数法漏了循环里的断言 —— 这是静态计数的错，不是文档的错 | `tools/selftest.gd` |
-| 11 | `tools/run.ps1` 是"通用运行器"，注释里的用法是 `pwsh -File tools\run.ps1 -Script ...` | 它的 `-Project` 参数**默认硬编码为 `"C:\Users\user\Desktop\ds harness\rogue_dshrl"`**（带空格的老路径），`-Godot` 也硬编码到 `E:\Godot\...`。**这个目录在那台机器上真的存在**（已确认），所以用默认参数跑会去跑另一个仓库，且输出看起来完全正常 | `tools/run.ps1:10-11` |
+| 11 | `tools/run.ps1` 是"通用运行器"，注释里的用法是 `pwsh -File tools\run.ps1 -Script ...` | 它的 `-Project` 参数**默认曾硬编码为一个带空格的绝对路径**（那个目录在作者机器上真的存在），`-Godot` 也写死了盘符下的绝对路径。**用默认参数跑会去跑另一个仓库，且输出看起来完全正常**。已修：`-Project` 默认取脚本上级目录（仓库根），`-Godot` 读环境变量 `GODOT` / `PATH` | `tools/run.ps1:10-11` |
 | 12 | 日志头部 `DSH-RL 无头模拟器  runs=6 max_frames=24000` | **不打印种子**，但种子才是决定结果的那个输入。再加上 `logs/` 里没有版本标记，导致事后无法复现也无法溯源（§4.3 就是被这个害的） | `tools/sim.gd:37` |
 
 第 2、3、5、5b 条是同一类问题：**`core/constants.gd` 的 `AI` 段（9 个字段）里有 8 个是

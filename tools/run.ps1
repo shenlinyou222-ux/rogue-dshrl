@@ -7,8 +7,11 @@ param(
   [string]$Script = "tools/selftest.gd",
   [int]$TimeoutSec = 300,
   [string]$Extra = "",
-  [string]$Project = "C:\Users\user\Desktop\ds harness\rogue_dshrl",
-  [string]$Godot = "E:\Godot\Godot_v4.7.2-stable_win64_console.exe",
+  # 默认 = 本脚本所在目录的上一级（即仓库根），可用环境变量 GODOT_PROJECT_DIR 覆盖
+  [string]$Project = $(if ($env:GODOT_PROJECT_DIR) { $env:GODOT_PROJECT_DIR }
+                       else { (Resolve-Path (Join-Path $PSScriptRoot '..')).Path }),
+  # 默认 = 环境变量 GODOT 指定的 Godot 控制台可执行文件，否则用 PATH 里的同名程序
+  [string]$Godot = $(if ($env:GODOT) { $env:GODOT } else { 'Godot_v4.7.2-stable_win64_console.exe' }),
   [switch]$Quiet
 )
 $out = Join-Path $env:TEMP "dshrl_out.txt"
